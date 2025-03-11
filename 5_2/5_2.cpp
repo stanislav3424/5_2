@@ -39,7 +39,10 @@ class Base
         return sides;
     }
 
-    virtual bool isValid() = 0;
+    virtual bool isValid()
+    {
+        return true;
+    };
 
     ~Base()
     {
@@ -55,11 +58,6 @@ class TriangleBase : public Base
     {
         numberOfSides = 3;
     }
-
-    bool isValid() override
-    {
-        return true;
-    }
 };
 
 class QuadrangleBase : public Base
@@ -68,11 +66,6 @@ class QuadrangleBase : public Base
     QuadrangleBase(std::string nameFigure, NameInt* angles, NameInt* sides) : Base(nameFigure, angles, sides)
     {
         numberOfSides = 4;
-    }
-
-    bool isValid() override
-    {
-        return true;
     }
 };
 
