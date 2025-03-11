@@ -86,7 +86,7 @@ class RightAngledTriangle : public TriangleBase
     bool isValid() override
     {
 
-        return (sides[0].value == 90 || sides[1].value == 90 || sides[2].value == 90);
+        return (angles[0].value == 90 || angles[1].value == 90 || angles[2].value == 90);
     }
 };
 
