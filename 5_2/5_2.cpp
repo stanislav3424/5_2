@@ -85,11 +85,8 @@ class RightAngledTriangle : public TriangleBase
 
     bool isValid() override
     {
-        int cathetus1 = sides[0].value;
-        int cathetus2 = sides[1].value;
-        int hypotenuse = sides[2].value;
 
-        return (hypotenuse == (cathetus1 * cathetus1 + cathetus2 * cathetus2) / hypotenuse);
+        return (sides[0].value == 90 || sides[1].value == 90 || sides[2].value == 90);
     }
 };
 
